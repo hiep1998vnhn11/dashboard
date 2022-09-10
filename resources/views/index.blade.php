@@ -21,7 +21,6 @@
         window.$RefreshReg$ = () => {};
         window.$RefreshSig$ = () => () => {};
     </script>
-    <script src="/js/ckeditor/ckeditor.js"></script>
     <script type="module" src="http://localhost:{{ env('VITE_PORT') }}/@vite/client"></script>
     <script type="module" src="http://localhost:{{ env('VITE_PORT') }}/resources/js/main.tsx"></script>
     @endenv
