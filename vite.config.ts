@@ -29,7 +29,6 @@ export default defineConfig({
   build: {
     target: 'es2015',
     outDir: OUTPUT_DIR,
-    brotliSize: false,
     chunkSizeWarningLimit: 2000,
     manifest: true,
     emptyOutDir: false,

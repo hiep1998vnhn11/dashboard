@@ -13,7 +13,7 @@ import { loginApi, getUser } from '/@/api/auth'
 import useApp from './useApp'
 interface AuthContextType {
   token: string | null
-  user?: User
+  user: User | null
   error?: any
   login: (email: string, password: string) => void
   signUp: (email: string, name: string, password: string) => void
@@ -30,10 +30,10 @@ export function AuthProvider({
 }): JSX.Element {
   const navigate = useNavigate()
   const { toastError, toggleLoading } = useApp()
-  const [user, setUser] = useState<User>(
+  const [user, setUser] = useState<User | null>(
     localStorage.getItem('user')
       ? JSON.parse(localStorage.getItem('user')!)
-      : undefined
+      : null
   )
   const [token, setToken] = useState(localStorage.getItem('access_token'))
   const [error, setError] = useState<any>()

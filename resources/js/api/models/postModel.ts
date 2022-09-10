@@ -31,3 +31,7 @@ export interface CreatePostParams {
   category_id?: (number | string)[]
   summary: string | null
 }
+
+export interface Post {}
+
+export interface PostParams {}
